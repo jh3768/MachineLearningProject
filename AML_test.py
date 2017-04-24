@@ -3,12 +3,12 @@
 
 # In[1]:
 
-from pyrouge import Rouge155
-from rouge import Rouge
+#from pyrouge import Rouge155
+#from rouge import Rouge
 import re
 import nltk
-import nltk.data
-from nltk.corpus import stopwords
+#import nltk.data
+#from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.stem.porter import PorterStemmer
@@ -18,7 +18,7 @@ import sys
 import os
 
 
-#nltk.download()
+nltk.download("punkt")
 #stop_words = set(stopwords.words('english'))
 
 stop_words = {u'a',
@@ -179,8 +179,8 @@ stop_words = {u'a',
 
 # In[2]:
 
-rouge = Rouge()
-print dir(rouge)
+#rouge = Rouge()
+#print dir(rouge)
 
 def count_title(s, title):
     count = 0
@@ -283,45 +283,56 @@ print sys.getdefaultencoding()
 
 
 
-d = "/Users/cammyluffy/Downloads/4772Project/AML_train/docs/"
+#d = "/Users/cammyluffy/Downloads/4772Project/AML_train/docs/"
+d = "/home/jh3768/MachineLearningProject/AML_test/docs/"
 features = []
 import io
-out_file = open('train_X.txt', 'wb')
-for file in os.listdir("/Users/cammyluffy/Downloads/4772Project/AML_train/docs"):
-    if file.endswith(".txt"):
-        print(os.path.join("", file))
-        name = d + os.path.join("", file)
-        #print name
-        with io.open(name, encoding='ISO-8859-1') as f:
-            read_data1 = f.read()
-            read_data = read_data1.decode("utf8")
-            feature = create_training_data(read_data)
-            #print feature
-            features.extend(feature)
-            #pickle.dump(feature, out_file)                
-            f.close()
+def run():
+	count = 0
+	out_file = open('test_X.txt', 'wb')
+	for file in os.listdir("/home/jh3768/MachineLearningProject/AML_test/docs"):
+    		if file.endswith(".txt"):
+			count += 1
+			print count
+        		print(os.path.join("", file))
+        		name = d + os.path.join("", file)
+        		#print name
+        		with io.open(name, encoding='ISO-8859-1') as f:
+            			read_data1 = f.read()
+            			read_data = read_data1.decode("utf8")
+				feature = create_training_data(read_data)
+            			#print feature
+            			features.append(feature)
+            			pickle.dump(feature, out_file)                
+            			f.close()
+
 #print features
-# print create_training_data(read_data)
-# out_file = open('train_X.txt', 'wb')
-# pickle.dump(features, out_file)
+#print create_training_data(read_data)
+#out_file = open('train_X.txt', 'wb')
+#pickle.dump(features, out_file)
 
 
 # In[6]:
-
+#run()
 print features
-# out_file = open('train_X.txt', 'wb')
-# pickle.dump(features, out_file)
-# out_file.close()
+#out_file = open('test_X.txt', 'wb')
+#pickle.dump(features, out_file)
+#out_file.close()
 
+print
 
 # In[ ]:
-
-import pickle
-with open('train_X.txt', 'rb') as in_file:
+my_list = []
+#import pickle
+with open('test_X.txt', 'rb') as in_file:
     my_list = pickle.load(in_file)
 print my_list
 
 
+count = 0
+for article in my_list:
+	count += 1
+	print count
 # In[ ]:
 
 
