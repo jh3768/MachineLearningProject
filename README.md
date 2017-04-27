@@ -1,4 +1,4 @@
-#  Automatic summarization of article using regularised SVM and Naive Bayes
+#  Automatic Summarization of Article Using Regularised SVM and Naive Bayes
 
 
 Objective:
