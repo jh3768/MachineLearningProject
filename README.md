@@ -1,4 +1,4 @@
-#  Automatic summarization of article using regularised SVM and Lasso regression    
+#  Automatic summarization of article using regularised SVM and Naive Bayes
 
 
 Objective:
