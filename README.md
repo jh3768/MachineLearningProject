@@ -1,4 +1,4 @@
-# MachineLearningProject
+#  Automatic summarization of article using regularised SVM and Lasso regression    
 
 <snippet>
   <content><![CDATA[
@@ -10,6 +10,7 @@ For a large content of text file, we want to retrieve the most important informa
 BBC articles with highlights
 ]]></content>
   <tabTrigger>readme</tabTrigger>
+  </snippet>
 
 
 Automatic summarization of article using regularised SVM and Lasso regression              
