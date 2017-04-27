@@ -1,6 +1,18 @@
 # MachineLearningProject
-COMS 4772 Advanced machine learning project proposal
- Automatic summarization of article using regularised SVM and Lasso regression              
+
+<snippet>
+  <content><![CDATA[
+# ${1:Automatic summarization of article using regularised SVM and Lasso regression}
+## COMS 4772 Advanced machine learning project proposal
+## Objective:
+For a large content of text file, we want to retrieve the most important information and summarize the content in a few lines of words. In other words, we want to reduce a large amount of data into a useful small amount of data by extracting the most important content. The data comes from the web in a specific field (e.g. political news, reports).## Installation
+## Data
+BBC articles with highlights
+]]></content>
+  <tabTrigger>readme</tabTrigger>
+
+
+Automatic summarization of article using regularised SVM and Lasso regression              
 Jiamin Huang  jh3768            Shuyang Zhao sz2631                Lingjun Zhao lz2495
 
 Objective:
